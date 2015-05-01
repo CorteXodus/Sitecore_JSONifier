@@ -7,8 +7,8 @@ Once you've got a JSON file you can, for example, do fun things like feed it int
 interactive sitemap.
 
 Please note: you will need to add the contents of a given Sitecore instance's web.config file to this app's app.config file.
-Also, you will need to copy over the Sitecore instance's App_Config folder into this project, and then mnaually set
-all the files within each folder to "Copy to Output Directory" for ease of use.
+Also, you will need to copy over the Sitecore instance's App_Config folder into this project, and then manually set
+all the files within each folder to "Copy to Output Directory" for ease of use .
 
 Here is a link to someone that outlined the above information in a more visual fashion
 http://www.experimentsincode.com/?p=232
