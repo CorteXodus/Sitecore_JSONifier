@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4B9A8AF4-3A94-4B47-A5E8-722B2FC906CE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_JSONifier</RootNamespace>
+    <AssemblyName>SC_JSONifier</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Lucene.Net">
+      <HintPath>C:\inetpub\wwwroot\SC7Dev1\Website\bin\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="Sitecore.Analytics">
+      <HintPath>C:\inetpub\wwwroot\SC7Dev1\Website\bin\Sitecore.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>C:\inetpub\wwwroot\SC7Dev1\Website\bin\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Logging">
+      <HintPath>C:\inetpub\wwwroot\SC7Dev1\Website\bin\Sitecore.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="sitecore.nexus">
+      <HintPath>C:\inetpub\wwwroot\SC7Dev1\Website\bin\sitecore.nexus.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Config\Commands.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\ConnectionStrings.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\ConnectionStringsOracle.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\FieldTypes.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Icons.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Captcha.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Example Configs\DataFolder.config.example" />
+    <None Include="App_Config\Include\Example Configs\EventHandler.config.example" />
+    <None Include="App_Config\Include\Example Configs\ForwardingSecurityEvents.config.example" />
+    <None Include="App_Config\Include\Example Configs\ja-JP.config.example" />
+    <None Include="App_Config\Include\Example Configs\LiveMode.config.example" />
+    <None Include="App_Config\Include\Example Configs\ScalabilitySettings.config.example" />
+    <None Include="App_Config\Include\Example Configs\Sitecore.Buckets.Scaling.config.example" />
+    <None Include="App_Config\Include\Example Configs\Sitecore.Buckets.WarmupQueries.config.example" />
+    <None Include="App_Config\Include\Example Configs\Sitecore.ContentSearch.Lucene.Indexes.Sharded.Core.config.example" />
+    <None Include="App_Config\Include\Example Configs\Sitecore.ContentSearch.Lucene.Indexes.Sharded.Master.config.example" />
+    <None Include="App_Config\Include\Example Configs\Sitecore.ContentSearch.Lucene.Indexes.Sharded.Web.config.example" />
+    <None Include="App_Config\Include\Example Configs\Sitecore.ContentSearch.VerboseLogging.config.example" />
+    <None Include="App_Config\Include\Example Configs\Sitecore.MvcAnalytics.config.disabled" />
+    <None Include="App_Config\Include\Example Configs\Sitecore.PipelineProfiling.config.disabled" />
+    <None Include="App_Config\Include\Example Configs\Sitecore.Publishing.DedicatedInstance.config.example" />
+    <None Include="App_Config\Include\Example Configs\Sitecore.Publishing.EventProvider.Async.config.disabled" />
+    <None Include="App_Config\Include\Example Configs\Sitecore.Publishing.Optimizations.config.example" />
+    <None Include="App_Config\Include\Example Configs\Sitecore.Publishing.Parallel.config.disabled" />
+    <None Include="App_Config\Include\Example Configs\Sitecore.Publishing.Recovery.config.example" />
+    <None Include="App_Config\Include\Example Configs\SitecoreSettings.config.example" />
+    <None Include="App_Config\Include\Example Configs\SiteDefinition.config.example" />
+    <None Include="App_Config\Include\Example Configs\WebDeploy.config.example" />
+    <None Include="App_Config\Include\Example Configs\XslExtension.config.example" />
+    <None Include="App_Config\Include\forms.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\ldap.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\RedirectManager.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Regis.Commands.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Sitecore.Analytics.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Sitecore.Analytics.ExcludeRobots.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Sitecore.Analytics.RobotDetection.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Sitecore.AntiCsrf.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Sitecore.Buckets.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Sitecore.ContentSearch.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Sitecore.ContentSearch.Lucene.DefaultIndexConfiguration.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Sitecore.ContentSearch.Lucene.Index.Core.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Sitecore.ContentSearch.Lucene.Index.Master.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Sitecore.ContentSearch.Lucene.Index.Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Sitecore.ItemWebApi.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Sitecore.Mvc.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Sitecore.MvcExperienceEditor.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Sitecore.MvcSimulator.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Sitecore.SharedSource.RedirectManager.config.BAK" />
+    <None Include="App_Config\Include\Sitecore.Shell.MarketingAutomation.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Sitecore.Speak.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Sitecore.Speak.ItemWebApi.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Sitecore.Speak.Mvc.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\Sitecore.WebDAV.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Include\SitemapXML.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\LanguageDefinitions.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\MimeTypes.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Portraits.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Prefetch\Common.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Prefetch\Core.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Prefetch\Master.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Prefetch\Webdb.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Prototypes.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Security\Domains.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\Security\GlobalRoles.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Config\XamlSharp.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
